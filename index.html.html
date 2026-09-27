@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | Brand &amp; Experiential Marketing, Operations and Audit Background</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cobalt: #2B3BFF;
+    --tangerine: #FF7A1A;
+    --pink: #FFB8E0;
+    --ink: #12123A;
+    --bg: #F7F6FF;
+    --bg-alt: #E9E7FF;
+    --text: #12123A;
+    --muted: #4A4A78;
+    --line: #12123A;
+    --hl: #FFE94D;
+    --display: "Bricolage Grotesque", "Trebuchet MS", "Segoe UI", sans-serif;
+    --body: "Figtree", "Segoe UI", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E0F2E; --bg-alt: #171848; --text: #F1F0FF; --muted: #B4B3E0; --line: #F1F0FF;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E0F2E; --bg-alt: #171848; --text: #F1F0FF; --muted: #B4B3E0; --line: #F1F0FF;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--body); font-size: 1.05rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.02; letter-spacing: -0.03em; }
+  p { margin: 0; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--hl); outline-offset: 3px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.4rem; }
+
+  /* placeholders the person fills in */
+  .ph { background: var(--hl); color: #12123A; padding: 0 .3em; border-radius: 4px; font-weight: 500; }
+
+  /* HERO */
+  .hero { background: var(--cobalt); color: #fff; padding: 2.2rem 0 0; position: relative; overflow: hidden; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-weight: 600; }
+  .topbar nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .topbar a { text-decoration: none; }
+  .topbar a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .hero h1 { font-weight: 800; font-size: clamp(3rem, 10.5vw, 8.6rem); margin: 4rem 0 2rem; max-width: 14ch; }
+  .hero .lede { font-size: clamp(1.1rem, 2vw, 1.4rem); max-width: 40rem; color: #E3E5FF; }
+  .hero .lede strong { color: #fff; }
+  .cta-row { display: flex; gap: .9rem; flex-wrap: wrap; margin: 2rem 0 3.5rem; }
+  .btn { display: inline-block; padding: .85rem 1.5rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 2px solid #fff; transition: transform .15s ease; }
+  .btn.solid { background: #fff; color: var(--cobalt); }
+  .btn.ghost { color: #fff; }
+  .btn:hover { transform: translateY(-2px); }
+  .sticker { position: absolute; right: clamp(1rem, 6vw, 5rem); top: clamp(7rem, 16vw, 11rem); width: clamp(120px, 17vw, 190px); aspect-ratio: 1; border-radius: 50%; background: var(--tangerine); color: var(--ink); display: grid; place-items: center; text-align: center; font-family: var(--display); font-weight: 800; font-size: clamp(.95rem, 1.7vw, 1.3rem); line-height: 1.1; padding: 1rem; transform: rotate(-9deg); box-shadow: 6px 6px 0 var(--ink); }
+
+  /* MARQUEE: the one moving thing on the page */
+  .marquee { background: var(--ink); color: #fff; overflow: hidden; white-space: nowrap; border-top: 3px solid var(--ink); }
+  .marquee-track { display: inline-flex; gap: 2.2rem; padding: .9rem 0; animation: slide 32s linear infinite; font-family: var(--display); font-weight: 800; font-size: 1.25rem; }
+  .marquee-track span:nth-child(even) { color: var(--tangerine); }
+  @keyframes slide { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } html { scroll-behavior: auto; } .btn { transition: none; } }
+
+  /* SECTIONS */
+  section { padding: 5rem 0; }
+  .sec-title { font-weight: 800; font-size: clamp(2.2rem, 6vw, 4.2rem); margin-bottom: 1rem; max-width: 18ch; }
+  .sec-intro { color: var(--muted); max-width: 38rem; margin-bottom: 3rem; }
+
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: start; }
+  .about-grid p + p { margin-top: 1rem; }
+  .facts { border: 3px solid var(--line); border-radius: 20px; padding: 1.6rem; background: var(--pink); color: var(--ink); box-shadow: 8px 8px 0 var(--line); }
+  .facts h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+  .facts dl { margin: 0; display: grid; gap: .8rem; }
+  .facts dt { font-weight: 600; font-size: .9rem; }
+  .facts dd { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.6rem; line-height: 1.1; }
+
+  /* BRIDGE */
+  .bridge { background: var(--bg-alt); }
+  .pairs { display: grid; gap: 1.2rem; }
+  .pair { display: grid; grid-template-columns: 1fr 64px 1fr; align-items: stretch; }
+  .pair .from, .pair .to { padding: 1.4rem 1.6rem; border: 3px solid var(--line); border-radius: 18px; }
+  .pair .from { background: var(--bg); }
+  .pair .to { background: var(--tangerine); color: var(--ink); }
+  .pair .join { display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 2rem; }
+  .pair h3 { font-size: 1.35rem; margin-bottom: .4rem; letter-spacing: -0.02em; }
+  .pair p { font-size: .98rem; }
+
+  /* EXPERIENCE */
+  .role { display: grid; grid-template-columns: 240px 1fr; gap: 2.5rem; padding: 2.4rem 0; border-top: 3px solid var(--line); }
+  .role:last-child { border-bottom: 3px solid var(--line); }
+  .role .when { font-weight: 600; color: var(--muted); }
+  .role .when b { display: block; font-family: var(--display); font-weight: 800; font-size: 1.5rem; color: var(--text); line-height: 1.1; margin-bottom: .3rem; }
+  .role h3 { font-size: 1.9rem; margin-bottom: 1rem; }
+  .role ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .7rem; }
+  .role li::marker { color: var(--tangerine); }
+
+  /* CASE STUDIES */
+  .cases { display: grid; gap: 1.6rem; }
+  .case { border: 3px solid var(--line); border-radius: 26px; padding: clamp(1.4rem, 4vw, 2.8rem); color: var(--ink); display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; }
+  .case:nth-child(1) { background: var(--pink); }
+  .case:nth-child(2) { background: var(--tangerine); }
+  .case:nth-child(3) { background: #B9C0FF; }
+  .case h3 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); }
+  .case .tag { font-weight: 600; margin-top: .8rem; }
+  .case dl { margin: 0; display: grid; gap: 1rem; }
+  .case dt { font-family: var(--display); font-weight: 800; font-size: 1.15rem; }
+  .case dd { margin: .1rem 0 0; }
+
+  /* TOOLKIT */
+  .toolkit { background: var(--ink); color: #fff; }
+  .toolkit .sec-intro { color: #C9C8F0; }
+  .kit { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem; }
+  .kit h3 { font-size: 1.4rem; margin-bottom: .9rem; color: var(--tangerine); }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
+  .chips li { border: 2px solid #fff; border-radius: 999px; padding: .3rem .95rem; font-weight: 500; font-size: .95rem; }
+
+  /* CONTACT */
+  .contact { background: var(--tangerine); color: var(--ink); text-align: left; }
+  .contact h2 { font-weight: 800; font-size: clamp(2.6rem, 9vw, 7rem); max-width: 12ch; margin-bottom: 1.6rem; }
+  .contact p { max-width: 34rem; margin-bottom: 2rem; font-size: 1.15rem; }
+  .contact .links { display: flex; gap: .9rem; flex-wrap: wrap; }
+  .contact .btn { border-color: var(--ink); color: var(--ink); }
+  .contact .btn.solid { background: var(--ink); color: #fff; }
+  footer { background: var(--ink); color: #C9C8F0; padding: 1.4rem 0; font-size: .9rem; }
+
+  @media (max-width: 860px) {
+    .about-grid, .case, .kit, .role { grid-template-columns: 1fr; }
+    .role { gap: 1rem; }
+    .pair { grid-template-columns: 1fr; }
+    .pair .join { transform: rotate(90deg); height: 40px; }
+    .sticker { position: static; margin: 1.5rem 0 0; transform: rotate(-6deg); }
+    .hero h1 { margin-top: 2.5rem; }
+    section { padding: 3.5rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <span><span class="ph">Your Name</span></span>
+      <nav aria-label="Sections">
+        <a href="#switch">The switch</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Selected work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <h1>I run the experience. Now I want to run the brand.</h1>
+    <p class="lede">Operations and Experience Manager at <strong>Vagabond Experiences</strong>, audit-trained, with hands-on hosting and on-ground delivery. I know how to run a live experience end to end: vendors, budgets, guests, timing. That is exactly the background that leads a marketing campaign well, not just supports one.</p>
+    <div class="cta-row">
+      <a class="btn solid" href="#work">See the work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+    <div class="sticker" aria-hidden="true">Open to brand & experiential marketing roles</div>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Meta performance marketing</span><span>✦</span><span>Social media management</span><span>✦</span><span>Guest experience</span><span>✦</span><span>Vendor management</span><span>✦</span><span>Budget control</span><span>✦</span><span>Audit and compliance</span><span>✦</span><span>Event operations</span><span>✦</span><span>Team leadership</span><span>✦</span>
+      <span>Meta performance marketing</span><span>✦</span><span>Social media management</span><span>✦</span><span>Guest experience</span><span>✦</span><span>Vendor management</span><span>✦</span><span>Budget control</span><span>✦</span><span>Audit and compliance</span><span>✦</span><span>Event operations</span><span>✦</span><span>Team leadership</span><span>✦</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2 class="sec-title">Ops brain. Audit eye. Creator-first mindset.</h2>
+        <p>I started in audit, where I learned to check every number and trust nothing I could not verify. That took me into operations and experience management at Vagabond Experiences, where I run live experiences end to end: hosting, vendors, budgets, and the guests in front of me. Leading a marketing campaign is not so different from leading an experience; both need someone who can hold the plan, the people and the budget together on the day.</p>
+        <p>Alongside this, I have picked up hands-on Meta performance marketing and social media experience through some independent work, which rounds out my understanding of paid and organic campaigns.</p>
+        <p>Brand and experiential marketing sits right where these skills meet. Whether it is a live activation, a creator campaign or a paid push, it needs someone who has actually run something live, on the ground, with a budget and a team behind it. <span class="ph">Add one sentence on why influencer marketing excites you, for example a campaign you admired or content you create yourself.</span></p>
+      </div>
+      <aside class="facts" aria-label="Quick facts">
+        <h3>At a glance</h3>
+        <dl>
+          <div><dt>Current role</dt><dd>Operations and Experience Manager, Vagabond Experiences</dd></div>
+          <div><dt>Also skilled in</dt><dd>Meta performance marketing and social media (independent work)</dd></div>
+          <div><dt>Years of experience</dt><dd><span class="ph">X years</span></dd></div>
+          <div><dt>Based in</dt><dd><span class="ph">City</span></dd></div>
+          <div><dt>Looking for</dt><dd>Brand & experiential marketing roles, including influencer marketing</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="switch" class="bridge">
+    <div class="wrap">
+      <h2 class="sec-title">Same instincts, new playground.</h2>
+      <p class="sec-intro">Here is how what I already do maps onto the work of an influencer marketing team.</p>
+      <div class="pairs">
+        <div class="pair">
+          <div class="from"><h3>I ran on-ground guest experiences</h3><p>Planned, staffed and delivered experiences where timing, logistics and guest mood all had to line up.</p></div>
+          <div class="join" aria-hidden="true">→</div>
+          <div class="to"><h3>I can run creator activations</h3><p>Trips, product launches and shoots where creators arrive, everything is ready, and the content gets made without drama.</p></div>
+        </div>
+        <div class="pair">
+          <div class="from"><h3>I managed vendors and partners</h3><p>Negotiated, briefed and followed up with suppliers, and held them to what was agreed.</p></div>
+          <div class="join" aria-hidden="true">→</div>
+          <div class="to"><h3>I can manage creator relationships</h3><p>Clear briefs, fair terms, timely follow-ups, and creators who want to work with us again.</p></div>
+        </div>
+        <div class="pair">
+          <div class="from"><h3>I controlled budgets and costs</h3><p>Tracked spend against plan and found where money was leaking.</p></div>
+          <div class="join" aria-hidden="true">→</div>
+          <div class="to"><h3>I can protect campaign budgets</h3><p>Reconcile creator fees, track deliverables against payments, and report what each rupee delivered.</p></div>
+        </div>
+        <div class="pair">
+          <div class="from"><h3>I audited processes and numbers</h3><p>Verified data, flagged risk, and wrote findings people could act on.</p></div>
+          <div class="join" aria-hidden="true">→</div>
+          <div class="to"><h3>I can vet creators and prove results</h3><p>Check audience quality and engagement, catch inflated numbers, and turn campaign data into honest reports.</p></div>
+        </div>
+        <div class="pair">
+          <div class="from"><h3>I run Meta campaigns on the side</h3><p>Hands-on with audiences, budgets and creatives for an NGO and a local business, alongside my core operations role.</p></div>
+          <div class="join" aria-hidden="true">→</div>
+          <div class="to"><h3>I understand the paid and content side too</h3><p>Enough to brief a media team or a creator well, not just manage the room they are working in.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="sec-title">Where I've done the work.</h2>
+      <p class="sec-intro">Numbers make this real, so fill in the highlighted parts with your own.</p>
+
+      <div class="role">
+        <div class="when"><b>Vagabond Experiences</b><span class="ph">Start year</span> to Present</div>
+        <div>
+          <h3>Operations and Experience Manager</h3>
+          <ul>
+            <li>Led operations for <span class="ph">number</span> experiences / events, serving <span class="ph">number</span> guests, with an average rating of <span class="ph">X.X</span>.</li>
+            <li>Hosted and ran on-ground delivery personally, managing timing, vendors and guest experience in real time.</li>
+            <li>Managed a team of <span class="ph">number</span> and coordinated with <span class="ph">number</span> vendors and partners.</li>
+            <li>Owned budgets of <span class="ph">amount</span> and brought costs down by <span class="ph">X%</span> through <span class="ph">what you changed</span>.</li>
+            <li>Built <span class="ph">a process, checklist or system</span> that cut <span class="ph">problem</span> by <span class="ph">X%</span>.</li>
+            <li>Handled guest feedback and escalations, turning <span class="ph">example</span> into <span class="ph">outcome, such as a repeat booking or a review</span>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="when"><b><span class="ph">Company name</span></b><span class="ph">Years</span></div>
+        <div>
+          <h3><span class="ph">Your audit title</span></h3>
+          <ul>
+            <li>Audited <span class="ph">type of clients or processes</span> across <span class="ph">industries</span>, covering <span class="ph">scale, for example accounts or locations</span>.</li>
+            <li>Identified <span class="ph">issues or savings</span> and presented findings to <span class="ph">who</span>.</li>
+            <li>Sharpened skills in verification, risk spotting, documentation and clear reporting, all of which carry over to campaign tracking and budget oversight.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="when"><b>Independent Work</b>Ongoing</div>
+        <div>
+          <h3>Meta Performance Marketing &amp; Social Media</h3>
+          <ul>
+            <li>Set up marketing and social media from scratch for an NGO, and run Meta ad campaigns and content for a local business.</li>
+            <li>Hands-on with campaign setup, audience targeting and content planning, alongside my core operations work.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="background: var(--bg-alt);">
+    <div class="wrap">
+      <h2 class="sec-title">Selected work.</h2>
+      <p class="sec-intro">Led by my strongest story first. Add screenshots or numbers where you can.</p>
+      <div class="cases">
+        <article class="case">
+          <div>
+            <h3><span class="ph">Flagship experience or event</span></h3>
+            <p class="tag">Operations and on-ground delivery, Vagabond Experiences</p>
+          </div>
+          <dl>
+            <div><dt>The challenge</dt><dd><span class="ph">What was at stake, scale of the event or experience</span></dd></div>
+            <div><dt>What I did</dt><dd><span class="ph">How you hosted, coordinated vendors and managed the budget on the day</span></dd></div>
+            <div><dt>The result</dt><dd><span class="ph">Guest rating, repeat bookings or a number that shows impact</span></dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <div>
+            <h3><span class="ph">Audit project or engagement</span></h3>
+            <p class="tag">Audit and analysis</p>
+          </div>
+          <dl>
+            <div><dt>The challenge</dt><dd><span class="ph">What needed checking or fixing</span></dd></div>
+            <div><dt>What I did</dt><dd><span class="ph">How you investigated and what you found</span></dd></div>
+            <div><dt>The result</dt><dd><span class="ph">Savings, fixes or changes made</span></dd></div>
+          </dl>
+        </article>
+        <article class="case">
+          <div>
+            <h3>Independent Meta &amp; social media work</h3>
+            <p class="tag">Performance marketing (supporting experience)</p>
+          </div>
+          <dl>
+            <div><dt>What I did</dt><dd>Set up Meta campaigns and social content for an NGO and a local business, alongside my core operations work</dd></div>
+            <div><dt>The result</dt><dd><span class="ph">A headline number, if you have one, such as follower growth or cost per result</span></dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="toolkit">
+    <div class="wrap">
+      <h2 class="sec-title">My toolkit.</h2>
+      <p class="sec-intro">What I bring to a campaign team on day one.</p>
+      <div class="kit">
+        <div>
+          <h3>Running things</h3>
+          <ul class="chips">
+            <li>Event operations</li><li>Vendor management</li><li>Guest experience</li><li>Team leadership</li><li>Scheduling</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Keeping things honest</h3>
+          <ul class="chips">
+            <li>Auditing</li><li>Budget tracking</li><li>Risk spotting</li><li>Reporting</li><li>Attention to detail</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Making content perform</h3>
+          <ul class="chips">
+            <li>Meta Ads Manager</li><li>Campaign setup</li><li>Audience targeting</li><li>Content calendars</li><li>Instagram and Reels</li><li>Creative briefs</li><li><span class="ph">Add tools you use</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's make something people talk about.</h2>
+      <p>I'm looking to move into brand and experiential marketing, bringing operations, audit and performance marketing skills with me. Influencer campaigns are one part of what I want to work on, not the whole story. Send me a message and I'll get back to you quickly.</p>
+      <div class="links">
+        <a class="btn solid" href="mailto:youremail@example.com">youremail@example.com</a>
+        <a class="btn" href="#">LinkedIn</a>
+        <a class="btn" href="#">Phone or WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span class="ph">Your Name</span> &nbsp;Portfolio</div>
+</footer>
+
+</body>
+</html>
